@@ -1,0 +1,61 @@
+/* ===== BASE SITE CSS START ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 0.625rem = 10px */
+html {
+  font-family: 'poppins', sans-serif;
+  font-size: 0.625rem;
+}
+
+/* 1.6rem = 16px */
+body {
+  font-size: 1.6rem;
+}
+/* ===== BASE SITE CSS END ===== */
+
+main {
+  width: 100vw;
+  height: 100vh;
+  aspect-ratio: 16/9;
+}
+
+.parent > div {
+  outline: red solid 1px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100%;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 7 / 6;
+}
+.div2 {
+  grid-area: 7 / 1 / 8 / 12;
+}
+.div3 {
+  grid-area: 1 / 6 / 4 / 9;
+}
+.div4 {
+  grid-area: 4 / 6 / 7 / 9;
+}
+.div5 {
+  grid-area: 1 / 9 / 2 / 12;
+}
+.div6 {
+  grid-area: 2 / 9 / 7 / 12;
+}
