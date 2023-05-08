@@ -10,6 +10,7 @@
 * {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 }
 
@@ -26,10 +27,11 @@ body {
 }
 /* ===== BASE SITE CSS END ===== */
 
-/* main grid section */
+/* --------- Main grid section --------- */
 .main_grid_section {
   width: 100vw;
   height: 100vh;
+
   aspect-ratio: 16/9;
 }
 
@@ -37,62 +39,59 @@ body {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+
   height: 100%;
   padding: 10px;
+
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .main_grid_container > div {
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: var(--bg-color-primary);
 }
+/* --------- Main grid section END --------- */
 
 .grid_box_1 {
-  margin: 0 10px 10px 0;
   grid-area: 1 / 1 / 7 / 6;
+
+  margin: 0 10px 10px 0;
+  background-image: url('../assets/img/city.jpg');
+  background-position: bottom;
+  background-size: cover;
 }
+
 .grid_box_2 {
   grid-area: 7 / 1 / 8 / 12;
 }
+
+/*  --------- Weather section --------- */
 .grid_box_3 {
+  grid-area: 1 / 6 / 4 / 9;
+
   width: 100%;
   height: 100%;
   margin: 0 0 10px 0px;
-  grid-area: 1 / 6 / 4 / 9;
-}
-.grid_box_4 {
-  margin: 10px 0 10px 0px;
-  grid-area: 4 / 6 / 7 / 9;
-}
-.grid_box_5 {
-  margin: 0 0 0px 10px;
-  grid-area: 1 / 9 / 2 / 12;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.grid_box_6 {
-  margin: 10px 0 10px 10px;
-  grid-area: 2 / 9 / 7 / 12;
 }
 
-/* Weather section */
 .weather_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: 100%;
-  width: 100%;
   gap: 10px;
-  padding: 10px;
 }
 
 .weather_container > div {
+  border-radius: 15px;
   background-color: white;
-  border-radius: 20px;
 }
 
 .weather_box_1 {
@@ -107,28 +106,156 @@ body {
 .weather_box_4 {
   grid-area: 2 / 2 / 3 / 3;
 }
+/*  --------- Weather section END --------- */
+
+/* --------- Meeting section --------- */
+.grid_box_4 {
+  grid-area: 4 / 6 / 7 / 9;
+
+  margin: 10px 0 10px 0px;
+
+  overflow: hidden;
+}
+
+.grid_box_4 > h2 {
+  margin-bottom: 3.5rem;
+  padding: 2.5rem 0 0 3rem;
+
+  font-size: 2.5rem;
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+}
+
+.meeting_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 0 2.9rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.meeting_box > div {
+  width: 4rem;
+  height: 4rem;
+  margin: 6px;
+  border-radius: 15px;
+  background-color: #dae1f0;
+
+  aspect-ratio: 1/1;
+}
+
+.meeting_box > p {
+  width: 100%;
+  margin-left: 1.5rem;
+
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+.meeting_box > h7 {
+  margin-right: 2.5rem;
+
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* --------- Time & Dato container --------- */
+.grid_box_5 {
+  display: flex;
+  grid-area: 1 / 9 / 2 / 12;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0 0px 10px;
+}
 
 .time_box {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 4vw;
   padding-right: 30px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 7.5rem;
+  font-weight: bold;
 }
 
 .date_box {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  border-left: 3px solid rgb(34, 22, 91, 0.5);
+
   padding-left: 30px;
+  border-left: 3px solid rgb(34, 22, 91, 0.5);
+
+  gap: 5px;
 }
 
 .date_box > h5 {
-  font-size: 1.6vw;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .date_box > h6 {
-  font-size: 1.2vw;
+  font-size: 2.5rem;
   font-weight: 500;
 }
+/* --------- Time & Dato container END --------- */
+
+/* --------- Workplace container --------- */
+.grid_box_6 {
+  grid-area: 2 / 9 / 7 / 12;
+
+  margin: 10px 0 10px 10px;
+
+  overflow: hidden;
+}
+
+.grid_box_6 > h2 {
+  margin-bottom: 3.5rem;
+  padding: 2.5rem 0 0 3rem;
+
+  font-size: 2.5rem;
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+}
+
+.workplace_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 0 2.9rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.workplace_box > div {
+  width: 4rem;
+  height: 4rem;
+  margin: 6px;
+  border-radius: 15px;
+  background-color: #dae1f0;
+
+  aspect-ratio: 1/1;
+}
+
+.workplace_box > p {
+  width: 100%;
+  margin-left: 1.5rem;
+
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+.workplace_box > h7 {
+  margin-right: 2.5rem;
+
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: right;
+}
+/* --------- Workplace container END --------- */
