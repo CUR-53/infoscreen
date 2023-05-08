@@ -119,7 +119,7 @@ body {
 
 .grid_box_4 > h2 {
   margin-bottom: 3.5rem;
-  padding: 2.5rem 0 0 3rem;
+  padding: 2.5rem 0 0 3.5rem;
 
   font-size: 2.5rem;
   font-weight: 500;
@@ -131,37 +131,34 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-
   margin: 0 2.9rem;
-  margin-bottom: 2rem;
-  border-radius: 15px;
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  border-radius: 1.5rem;
   background-color: white;
+  padding: 1.5rem;
 }
 
 .meeting_box > div {
   width: 4rem;
   height: 4rem;
-  margin: 6px;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   background-color: #dae1f0;
-
-  aspect-ratio: 1/1;
 }
 
 .meeting_box > p {
-  width: 100%;
-  margin-left: 1.5rem;
-
   font-size: 1.8rem;
   font-weight: normal;
 }
 
-.meeting_box > h7 {
-  margin-right: 2.5rem;
+.meeting_date {
+  margin-right: 1.8rem;
+  border-right: 2px solid rgb(34, 22, 91, 0.5);
+  padding-right: 1.8rem;
+  padding-left: 0.5rem;
 
   font-size: 1.8rem;
   font-weight: bold;
-  text-align: right;
 }
 
 /* --------- Time & Dato container --------- */
@@ -178,7 +175,7 @@ body {
   padding-right: 30px;
 
   font-family: 'Open Sans', sans-serif;
-  font-size: 7.5rem;
+  font-size: 7.8rem;
   font-weight: bold;
 }
 
@@ -197,7 +194,12 @@ body {
   font-weight: bold;
 }
 
-.date_box > h6 {
+.date_box_month {
+  display: flex;
+  gap: 10px;
+}
+
+.date_box h6 {
   font-size: 2.5rem;
   font-weight: 500;
 }
@@ -214,7 +216,7 @@ body {
 
 .grid_box_6 > h2 {
   margin-bottom: 3.5rem;
-  padding: 2.5rem 0 0 3rem;
+  padding: 2.5rem 0 0 3.5rem;
 
   font-size: 2.5rem;
   font-weight: 500;
@@ -228,7 +230,7 @@ body {
   align-items: center;
 
   margin: 0 2.9rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: 15px;
   background-color: white;
 }

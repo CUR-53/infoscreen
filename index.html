@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="scripts/index.js" type="module"></script>
+    <script src="scripts/index.js" defer></script>
     <link rel="stylesheet" href="styles/mainstyles.css" />
     <title>Infoscreen</title>
   </head>
@@ -25,30 +25,35 @@
           <h2>Meetings</h2>
           <!-- Meeting 1 START -->
           <div class="meeting_box">
-            <div class="meeting_img"></div>
-            <p>Søren H.</p>
-            <h7>Viborg</h7>
+            <h7 class="meeting_date">14. Feb</h7>
+            <p>Meeting with Telenor</p>
           </div>
 
           <!-- Meeting 2 START -->
           <div class="meeting_box">
-            <div class="meeting_img"></div>
-            <p>Søren H.</p>
-            <h7>Viborg</h7>
+            <h7 class="meeting_date">17. Feb</h7>
+            <p>New client coming for a visit</p>
           </div>
 
           <!-- Meeting 3 START -->
           <div class="meeting_box">
-            <div class="meeting_img"></div>
-            <p>Søren H.</p>
-            <h7>Viborg</h7>
+            <h7 class="meeting_date">20. Feb</h7>
+            <p>Team meeting</p>
+          </div>
+          <!-- Meeting 3 START -->
+          <div class="meeting_box">
+            <h7 class="meeting_date">27. Feb</h7>
+            <p>Meeting with Tv2</p>
           </div>
         </div>
         <div class="grid_box_5">
-          <div class="time_box">10:50</div>
+          <div id="clock" class="time_box"></div>
           <div class="date_box">
-            <h5>Sunday</h5>
-            <h6>5. May</h6>
+            <h5 id="day">Sunday</h5>
+            <div class="date_box_month">
+              <h6 id="date"></h6>
+              <h6 id="month">May</h6>
+            </div>
           </div>
         </div>
         <div class="grid_box_6">
