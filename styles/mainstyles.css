@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
+  --bg-color-primary: #dae1f0;
 }
 
 * {
@@ -22,40 +23,79 @@ body {
 }
 /* ===== BASE SITE CSS END ===== */
 
-main {
+.main_grid_section {
   width: 100vw;
   height: 100vh;
   aspect-ratio: 16/9;
 }
 
-.parent > div {
-  outline: red solid 1px;
-}
-
-.parent {
+.main_grid_container {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(7, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 100%;
+  padding: 10px;
 }
 
-.div1 {
+.main_grid_container > div {
+  border-radius: 20px;
+  background-color: var(--bg-color-primary);
+}
+
+.grid_box_1 {
+  margin: 0 10px 10px 0;
   grid-area: 1 / 1 / 7 / 6;
 }
-.div2 {
+.grid_box_2 {
   grid-area: 7 / 1 / 8 / 12;
 }
-.div3 {
+.grid_box_3 {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 10px 0px;
   grid-area: 1 / 6 / 4 / 9;
 }
-.div4 {
+.grid_box_4 {
+  margin: 10px 0 10px 0px;
   grid-area: 4 / 6 / 7 / 9;
 }
-.div5 {
+.grid_box_5 {
+  margin: 0 0 0px 10px;
   grid-area: 1 / 9 / 2 / 12;
 }
-.div6 {
+.grid_box_6 {
+  margin: 10px 0 10px 10px;
   grid-area: 2 / 9 / 7 / 12;
+}
+
+.weather_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+}
+
+.weather_container > div {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.weather_box_1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.weather_box_2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.weather_box_3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.weather_box_4 {
+  grid-area: 2 / 2 / 3 / 3;
 }
