@@ -154,6 +154,7 @@ body {
 
   white-space: nowrap;
 }
+
 @keyframes slide-left {
   from {
     -webkit-transform: translateX(30%);
