@@ -110,7 +110,7 @@ body {
 }
 
 /* --------- Viborg container --------- */
-/* --------- temp --------- */
+/* --------- Temp --------- */
 .weather_viborg_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -209,7 +209,7 @@ body {
 }
 
 /* --------- Aarhus container --------- */
-/* --------- temp --------- */
+/* --------- Temp --------- */
 .weather_aarhus_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -404,7 +404,6 @@ body {
   font-size: 2.5rem;
   font-weight: 500;
 }
-/* --------- Time & Dato container END --------- */
 
 /* --------- Workplace container --------- */
 .grid_box_6 {
@@ -461,4 +460,3 @@ body {
   font-weight: bold;
   text-align: right;
 }
-/* --------- Workplace container END --------- */
