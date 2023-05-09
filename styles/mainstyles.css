@@ -53,6 +53,7 @@ body {
 }
 /* --------- Main grid section END --------- */
 
+/*  --------- Img section --------- */
 .grid_box_1 {
   grid-area: 1 / 1 / 7 / 6;
 
@@ -62,6 +63,7 @@ body {
   background-size: cover;
 }
 
+/*  --------- News section --------- */
 .grid_box_2 {
   grid-area: 7 / 1 / 8 / 12;
 }
@@ -106,7 +108,204 @@ body {
 .weather_box_4 {
   grid-area: 2 / 2 / 3 / 3;
 }
-/*  --------- Weather section END --------- */
+
+/* --------- Viborg container --------- */
+/* --------- temp --------- */
+.weather_viborg_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  width: 100%;
+  height: 100%;
+
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.temp_viborg {
+  display: flex;
+  grid-area: 1 / 1 / 2 / 2;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.icon_viborg {
+  display: flex;
+  grid-area: 1 / 2 / 2 / 3;
+  align-items: center;
+  justify-content: center;
+}
+
+.text_viborg {
+  display: flex;
+  flex-direction: column;
+  grid-area: 2 / 1 / 3 / 3;
+  justify-content: center;
+
+  padding-left: 2rem;
+}
+
+.text_viborg > h3 {
+  margin-top: -2rem;
+
+  font-size: 3.5rem;
+
+  line-height: 6rem;
+}
+
+.text_viborg > p {
+  font-size: 1.6rem;
+}
+
+/* --------- Percentage --------- */
+.percent_viborg_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  width: 100%;
+  height: 100%;
+
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.percent_viborg {
+  display: flex;
+  grid-area: 1 / 1 / 2 / 3;
+  align-items: center;
+
+  padding-left: 2rem;
+
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.percent_text_viborg {
+  display: flex;
+  flex-direction: column;
+  grid-area: 2 / 1 / 3 / 3;
+  justify-content: center;
+
+  padding-left: 2rem;
+}
+
+.percent_text_viborg > h3 {
+  margin-top: -2rem;
+  padding-bottom: 0.5rem;
+
+  font-size: 2.5rem;
+}
+
+.percent_text_viborg > p {
+  font-size: 1.6rem;
+
+  line-height: 2.5rem;
+}
+
+/* --------- Aarhus container --------- */
+/* --------- temp --------- */
+.weather_aarhus_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  width: 100%;
+  height: 100%;
+
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.temp_aarhus {
+  display: flex;
+  grid-area: 1 / 1 / 2 / 2;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.icon_aarhus {
+  display: flex;
+  grid-area: 1 / 2 / 2 / 3;
+  align-items: center;
+  justify-content: center;
+}
+
+.text_aarhus {
+  display: flex;
+  flex-direction: column;
+  grid-area: 2 / 1 / 3 / 3;
+  justify-content: center;
+
+  padding-left: 20px;
+}
+
+.text_aarhus > h3 {
+  margin-top: -2rem;
+
+  font-size: 3.5rem;
+
+  line-height: 6rem;
+}
+
+.text_aarhus > p {
+  font-size: 1.6rem;
+}
+
+/* --------- Percentage --------- */
+.percent_aarhus_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  width: 100%;
+  height: 100%;
+
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.percent_aarhus {
+  display: flex;
+  grid-area: 1 / 1 / 2 / 3;
+  align-items: center;
+
+  padding-left: 2rem;
+
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.percent_text_aarhus {
+  display: flex;
+  flex-direction: column;
+  grid-area: 2 / 1 / 3 / 3;
+  justify-content: center;
+
+  padding-left: 2rem;
+}
+
+.percent_text_aarhus > h3 {
+  margin-top: -2rem;
+  padding-bottom: 0.5rem;
+
+  font-size: 2.5rem;
+}
+
+.percent_text_aarhus > p {
+  font-size: 1.6rem;
+
+  line-height: 2.5rem;
+}
 
 /* --------- Meeting section --------- */
 .grid_box_4 {
@@ -131,12 +330,13 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+
   margin: 0 2.9rem;
   margin-bottom: 1rem;
   padding: 0.3rem;
+  padding: 1.5rem;
   border-radius: 1.5rem;
   background-color: white;
-  padding: 1.5rem;
 }
 
 .meeting_box > div {
@@ -153,9 +353,9 @@ body {
 
 .meeting_date {
   margin-right: 1.8rem;
-  border-right: 2px solid rgb(34, 22, 91, 0.5);
-  padding-right: 1.8rem;
   padding-left: 0.5rem;
+  padding-right: 1.8rem;
+  border-right: 2px solid rgb(34, 22, 91, 0.5);
 
   font-size: 1.8rem;
   font-weight: bold;
@@ -196,6 +396,7 @@ body {
 
 .date_box_month {
   display: flex;
+
   gap: 10px;
 }
 
