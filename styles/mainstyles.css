@@ -75,23 +75,75 @@ body {
   overflow: hidden;
 }
 
-.grid_box_2 p {
+.news_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+
+  width: 100%;
+  height: 100%;
+
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.news_title {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: var(--bg-color-primary);
+  width: 20rem;
+  height: 100%;
+  /* border: red 1px solid; */
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  position: relative;
+}
+
+.news_title h3 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.news_title h4 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 3rem;
+}
+
+.news_title:after {
+  border-right: 3px solid rgb(34, 22, 91, 0.5);
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  content: '';
+}
+
+.news_message {
+  display: flex;
+  grid-area: 1 / 2 / 2 / 6;
   align-items: center;
 
   width: max-content;
+  height: 100%;
+  /* border: red 1px solid; */
   background: none;
 
   font-family: impact, sans-serif;
 
-  animation: slide-left 45s linear infinite;
+  animation: slide-left 40s linear infinite;
 
   overflow: hidden;
 }
 
-.grid_box_2 > .news-message p {
-  padding-left: 0.5em;
+.news_message > p {
+  display: inline;
 
+  padding-left: 0.5em;
+  white-space: nowrap;
   font-family: 'montserrat', sans-serif;
   font-size: 2em;
   font-weight: 100;

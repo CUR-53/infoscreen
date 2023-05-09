@@ -32,3 +32,4 @@ document.getElementById('month').innerHTML = timeOfMonth;
 const date = new Date();
 let dateOfMonth = d.getDate();
 document.getElementById('date').innerHTML = dateOfMonth + '.';
+
