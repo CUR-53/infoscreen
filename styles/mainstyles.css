@@ -139,7 +139,7 @@ body {
 
   animation: slide-left 40s linear infinite;
 
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .news_message > p {
