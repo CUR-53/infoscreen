@@ -146,8 +146,9 @@ body {
   display: inline;
 
   font-family: 'montserrat', sans-serif;
-  font-weight: normal;
   font-size: 2rem;
+  font-weight: normal;
+
   white-space: nowrap;
 }
 
@@ -297,7 +298,7 @@ body {
   margin-top: -2rem;
   padding-bottom: 0.5rem;
 
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .percent_text_viborg > p {
@@ -396,7 +397,7 @@ body {
   margin-top: -2rem;
   padding-bottom: 0.5rem;
 
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .percent_text_aarhus > p {
