@@ -109,7 +109,7 @@ body {
 }
 
 .news_title h4 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: normal;
   text-align: center;
 
@@ -135,30 +135,30 @@ body {
   height: 100%;
   background: none;
 
-  font-family: impact, sans-serif;
+  font-family: 'montserrat', sans-serif;
 
-  animation: slide-left 40s linear infinite;
+  animation: slide-left 300s linear infinite;
 
   overflow: hidden;
 }
 
-.news_message > p {
+.news_message p {
   display: inline;
 
-  padding-left: 0.5em;
-
   font-family: 'montserrat', sans-serif;
-  font-size: 1.6em;
-  font-weight: 100;
   font-weight: normal;
-
+  font-size: 2rem;
   white-space: nowrap;
+}
+
+.news_message strong {
+  color: rgb(34, 22, 91, 0.5);
 }
 
 @keyframes slide-left {
   from {
-    -webkit-transform: translateX(30%);
-    transform: translateX(30%);
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
   }
   to {
     -webkit-transform: translateX(-100%);
