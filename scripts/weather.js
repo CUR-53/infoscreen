@@ -50,7 +50,7 @@ fetch(weatherViborg)
 fetch(weatherViborg)
   .then((response) => response.json())
   .then((data) => {
-    const precipitationViborg = data.daily.precipitation_sum[0] * 100;
+    const precipitationViborg = data.daily.precipitation_sum[1] * 100;
     const temperatureElement = document.querySelector('#rain_viborg');
     temperatureElement.textContent = `${precipitationViborg}%`;
   });
