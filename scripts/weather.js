@@ -1,10 +1,10 @@
 // Viborg, Denmark - WeatherAPI
 const weatherViborg =
-  'https://api.open-meteo.com/v1/forecast?latitude=56.46&longitude=9.45&hourly=precipitation&daily=weathercode,precipitation_sum&current_weather=true&windspeed_unit=ms&past_days=1&forecast_days=1&timezone=Europe%2FBerlin';
+  'https://api.open-meteo.com/v1/forecast?latitude=56.46&longitude=9.45&hourly=precipitation,rain&daily=weathercode,rain_sum,precipitation_sum&current_weather=true&windspeed_unit=ms&past_days=1&forecast_days=1&timezone=Europe%2FBerlin';
 
 // Aarhus, Denmark - WeatherAPI
 const weatherAarhus =
-  'https://api.open-meteo.com/v1/forecast?latitude=56.16&longitude=10.21&daily=precipitation_sum&current_weather=true&past_days=1&forecast_days=1&timezone=Europe%2FBerlin';
+  'https://api.open-meteo.com/v1/forecast?latitude=56.16&longitude=10.21&daily=precipitation_sum,rain_sum&current_weather=true&past_days=1&forecast_days=1&timezone=Europe%2FBerlin';
 
 const weatherCodes = {
   0: ['Clear sky', 'assets/svg/sun.svg'],
@@ -50,7 +50,7 @@ fetch(weatherViborg)
 fetch(weatherViborg)
   .then((response) => response.json())
   .then((data) => {
-    const precipitationViborg = data.daily.precipitation_sum[0] * 100;
+    const precipitationViborg = data.daily.rain_sum[0] * 100;
     const temperatureElement = document.querySelector('#rain_viborg');
     temperatureElement.textContent = `${precipitationViborg}%`;
   });
@@ -87,7 +87,7 @@ fetch(weatherAarhus)
 fetch(weatherAarhus)
   .then((response) => response.json())
   .then((data) => {
-    const precipitation = data.daily.precipitation_sum[0] * 100;
+    const precipitation = data.daily.rain_sum[0] * 100;
     const temperatureElement = document.querySelector('#rain_aarhus');
     temperatureElement.textContent = `${precipitation}%`;
   });
