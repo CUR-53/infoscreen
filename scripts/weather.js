@@ -1,6 +1,6 @@
 // Viborg, Denmark - WeatherAPI
 const weatherViborg =
-  'https://api.open-meteo.com/v1/forecast?latitude=56.46&longitude=9.45&hourly=precipitation,rain&daily=weathercode,rain_sum,precipitation_sum&current_weather=true&windspeed_unit=ms&past_days=1&forecast_days=1&timezone=Europe%2FBerlin';
+  'https://api.open-meteo.com/v1/forecast?latitude=56.45&longitude=9.40&hourly=precipitation,rain&daily=weathercode,rain_sum,precipitation_sum&current_weather=true&windspeed_unit=ms&past_days=1&forecast_days=1&timezone=Europe%2FBerlin';
 
 // Aarhus, Denmark - WeatherAPI
 const weatherAarhus =
