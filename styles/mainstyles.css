@@ -56,11 +56,59 @@ body {
 /*  --------- Img section --------- */
 .grid_box_1 {
   grid-area: 1 / 1 / 7 / 6;
-
+  flex: 1;
   margin: 0 1rem 1rem 0;
+  position: relative;
   background-image: url('../assets/img/city.jpg');
-  background-position: bottom;
   background-size: cover;
+  background-position: bottom;
+}
+
+.slides-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+}
+
+.slide {
+  position: absolute;
+  font-size: 90px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: 1vw;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.slides-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.color_box1 {
+  background-color: red;
+}
+
+.color_box2 {
+  background-color: green;
+}
+
+.color_box3 {
+  background-color: blue;
 }
 
 /*  --------- News section --------- */
