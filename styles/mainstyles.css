@@ -55,43 +55,54 @@ body {
 
 /*  --------- Img section --------- */
 .grid_box_1 {
-  grid-area: 1 / 1 / 7 / 6;
   flex: 1;
-  margin: 0 1rem 1rem 0;
+  grid-area: 1 / 1 / 7 / 6;
+
   position: relative;
+
+  margin: 0 1rem 1rem 0;
   background-image: url('../assets/img/city.jpg');
-  background-size: cover;
   background-position: bottom;
+  background-size: cover;
 }
 
 .slides-container {
-  position: relative;
-  overflow: hidden;
   display: flex;
-  height: 100%;
-  width: 100%;
   flex: 1;
+
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
 }
 
 .slide {
-  position: absolute;
-  font-size: 90px;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: absolute;
+
+  width: 100%;
   height: 100%;
   border-radius: 1vw;
-  width: 100%;
-  opacity: 0;
+
+  font-size: 90px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+
   transition: opacity 0.5s;
+  opacity: 0;
 }
 
 .slides-inner {
   position: relative;
-  height: 100%;
+
   width: 100%;
+  height: 100%;
+
   overflow: hidden;
 }
 
@@ -99,16 +110,114 @@ body {
   opacity: 1;
 }
 
-.color_box1 {
-  background-color: red;
-}
-
 .color_box2 {
   background-color: green;
 }
 
-.color_box3 {
-  background-color: blue;
+.slide_container,
+.slide_container_2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+
+  width: 100%;
+  height: 100%;
+  border-radius: 1vw;
+  background-color: var(--bg-color-primary);
+
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.slide_box1,
+.slide_box1_2 {
+  grid-area: 1 / 1 / 2 / 2;
+
+  width: auto;
+  height: auto;
+  margin: 1rem 1rem 0rem 1rem;
+  border-radius: 1vw;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  background-color: white;
+}
+
+.slide_box1 {
+  background-image: url('../assets/img/food.jpg');
+}
+
+.slide_box1_2 {
+  background-image: url('../assets/img/event.jpg');
+}
+
+.slide_box2,
+.slide_box2_2 {
+  display: flex;
+  flex-direction: column;
+  grid-area: 2 / 1 / 3 / 2;
+  background-color: white;
+  margin: 1rem 1rem 1rem 1rem;
+  border-radius: 1vw;
+
+  width: auto;
+  height: auto;
+  padding: 2vw;
+  color: var(--font-color-primary);
+  text-align: left;
+}
+
+.slide_box2 > p,
+.slide_box2_2 > p {
+  font-weight: 600;
+  font-size: 1vw;
+  color: rgb(34, 22, 91, 0.5);
+}
+
+.slide_box2 > p {
+  margin-bottom: 4rem;
+}
+
+.slide_box2_2 > p {
+  margin-bottom: 2rem;
+}
+
+.slide_box2 > h3,
+.slide_box2_2 > h3 {
+  font-size: 2vw;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  max-width: 90%;
+}
+
+.slide_box2 > span,
+.slide_box2_2 > span {
+  max-width: 800px;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+  line-height: 1.3vw;
+
+  font-size: 0.9vw;
+  font-weight: normal;
+}
+
+.slide_box2,
+.slide_box2_2 > ul {
+  font-size: 0.9vw;
+  font-weight: normal;
+
+  line-height: 1vw;
+}
+
+.slide_box2 > ul > li,
+.slide_box2_2 > ul > li {
+  list-style-position: inside;
+  font-weight: 600;
+}
+
+.slide_box2 > ul > li:not(:last-child),
+.slide_box2_2 > ul > li:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 
 /*  --------- News section --------- */
