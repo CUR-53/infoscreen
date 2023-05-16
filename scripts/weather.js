@@ -1,11 +1,10 @@
 // Viborg, Denmark - WeatherAPI
-const weatherViborg =
-  'https://api.open-meteo.com/v1/forecast?latitude=56.45&longitude=9.40&hourly=precipitation,rain&daily=weathercode,rain_sum,precipitation_sum&current_weather=true&windspeed_unit=ms&past_days=1&forecast_days=1&timezone=Europe%2FBerlin';
+import { weatherViborg } from './index.js';
 
 // Aarhus, Denmark - WeatherAPI
-const weatherAarhus =
-  'https://api.open-meteo.com/v1/forecast?latitude=56.16&longitude=10.21&daily=precipitation_sum,rain_sum&current_weather=true&past_days=1&forecast_days=1&timezone=Europe%2FBerlin';
+import { weatherAarhus } from './index.js';
 
+// Weather codes with corresponding text and icon
 const weatherCodes = {
   0: ['Clear sky', 'assets/svg/sun.svg'],
   1: ['Mainly clear', 'assets/svg/mainly_clear.svg'],
@@ -46,15 +45,6 @@ fetch(weatherViborg)
     temperatureElement.textContent = `${Math.round(data.current_weather.temperature)}°`;
   });
 
-// Viborg, Denmark - Rain chance
-fetch(weatherViborg)
-  .then((response) => response.json())
-  .then((data) => {
-    const precipitationViborg = data.daily.precipitation_sum[0] * 100;
-    const temperatureElement = document.querySelector('#rain_viborg');
-    temperatureElement.textContent = `${precipitationViborg}%`;
-  });
-
 // Viborg, Denmark - Weather Code
 fetch(weatherViborg)
   .then((response) => response.json())
@@ -81,15 +71,6 @@ fetch(weatherAarhus)
   .then((data) => {
     const temperatureElement = document.querySelector('#temperature_aarhus');
     temperatureElement.textContent = `${Math.round(data.current_weather.temperature)}°`;
-  });
-
-// Aarhus, Denmark - Rain chance
-fetch(weatherAarhus)
-  .then((response) => response.json())
-  .then((data) => {
-    const precipitation = data.daily.precipitation_sum[0] * 100;
-    const temperatureElement = document.querySelector('#rain_aarhus');
-    temperatureElement.textContent = `${precipitation}%`;
   });
 
 // Aarhus, Denmark - Weather Code
