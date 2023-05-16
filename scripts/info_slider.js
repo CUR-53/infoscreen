@@ -18,10 +18,10 @@ function nextSlide() {
   setTimeout(function () {
     slides[currentSlide].style.transition = '';
     slides[currentSlide].style.transform = 'translateX(-100%)';
-    setTimeout(showSlide, 3333, currentSlide + 1);
-  }, 3333);
+    setTimeout(showSlide, 6666, currentSlide + 1);
+  }, 6666);
 }
 
-setInterval(nextSlide, 15000);
+setInterval(nextSlide, 20000);
 
 showSlide(currentSlide);
