@@ -129,14 +129,15 @@ body {
 .slide_box1_2 {
   grid-area: 1 / 1 / 2 / 2;
 
+  z-index: 1;
+
   width: auto;
   height: auto;
   margin: 1rem 1rem 0rem 1rem;
   border-radius: 1vw;
+  background-color: white;
   background-position: center;
   background-size: cover;
-  z-index: 1;
-  background-color: white;
 }
 
 .slide_box1 {
@@ -152,21 +153,22 @@ body {
   display: flex;
   flex-direction: column;
   grid-area: 2 / 1 / 3 / 2;
-  background-color: white;
-  margin: 1rem 1rem 1rem 1rem;
-  border-radius: 1vw;
 
   width: auto;
   height: auto;
+  margin: 1rem 1rem 1rem 1rem;
   padding: 2vw;
-  color: var(--font-color-primary);
+  border-radius: 1vw;
+  background-color: white;
+
   text-align: left;
+  color: var(--font-color-primary);
 }
 
 .slide_box2 > p,
 .slide_box2_2 > p {
-  font-weight: 600;
   font-size: 1vw;
+  font-weight: 600;
   color: rgb(34, 22, 91, 0.5);
 }
 
@@ -180,10 +182,11 @@ body {
 
 .slide_box2 > h3,
 .slide_box2_2 > h3 {
-  font-size: 2vw;
-  margin-bottom: 2rem;
-  font-weight: bold;
   max-width: 90%;
+  margin-bottom: 2rem;
+
+  font-size: 2vw;
+  font-weight: bold;
 }
 
 .slide_box2 > span,
@@ -191,10 +194,11 @@ body {
   max-width: 800px;
   margin-bottom: 4rem;
   margin-top: 2rem;
-  line-height: 1.3vw;
 
   font-size: 0.9vw;
   font-weight: normal;
+
+  line-height: 1.3vw;
 }
 
 .slide_box2,
@@ -207,8 +211,9 @@ body {
 
 .slide_box2 > ul > li,
 .slide_box2_2 > ul > li {
-  list-style-position: inside;
   font-weight: 600;
+
+  list-style-position: inside;
 }
 
 .slide_box2 > ul > li:not(:last-child),
@@ -338,9 +343,9 @@ body {
   height: 100%;
   padding: 1rem;
 
+  gap: 1rem;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  gap: 1rem;
 }
 
 .weather_container > div {
